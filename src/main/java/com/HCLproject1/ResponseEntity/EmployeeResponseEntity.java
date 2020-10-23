@@ -6,12 +6,12 @@ public class EmployeeResponseEntity {
 	private int salary;
 
 public int getId() {
-	return id;
-}
+		return id;
+	}
 
-public void setId(int id) {
-	this.id = id;
-}
+	public void setId(int id) {
+		this.id = id;
+	}
 
 public String getName() {
 	return name;
@@ -29,11 +29,9 @@ public void setSalary(int salary) {
 	this.salary = salary;
 }
 
-public EmployeeResponseEntity(int id, String name, int salary) {
+public EmployeeResponseEntity() {
 	super();
-	this.id = id;
-	this.name = name;
-	this.salary = salary;
+	// TODO Auto-generated constructor stub
 }
 
 @Override
@@ -41,9 +39,13 @@ public String toString() {
 	return "EmployeeResponseEntity [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 }
 
-public EmployeeResponseEntity() {
+public EmployeeResponseEntity(int id, String name, int salary) {
 	super();
-	// TODO Auto-generated constructor stub
+	this.id = id;
+	this.name = name;
+	this.salary = salary;
 }
+
+
 
 }

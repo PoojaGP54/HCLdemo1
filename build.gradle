@@ -2,6 +2,8 @@ plugins {
 	id 'org.springframework.boot' version '2.3.4.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
+	// https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin
+	
 }
 
 group = 'com'
@@ -35,6 +37,16 @@ compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.21.Final'
 compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.1'
 	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
 compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.11.2'
+	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
+	
+	
+// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.0'
+
+// https://mvnrepository.com/artifact/org.mockito/mockito-core
+testCompile group: 'org.mockito', name: 'mockito-core', version: '3.3.3'
+
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

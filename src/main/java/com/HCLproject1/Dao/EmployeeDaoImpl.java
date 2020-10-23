@@ -3,6 +3,7 @@ package com.HCLproject1.Dao;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.HCLproject1.RequestEntity.EmployeeRequestEntity;
 import com.HCLproject1.ResponseEntity.EmployeeResponseEntity;
 
 @Repository
@@ -27,6 +28,13 @@ System.out.println("in dao layer"+id);
 		return result;
 
 	}
+
+	@Override
+	public EmployeeRequestEntity addEmployee(EmployeeRequestEntity empRequest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 
 }

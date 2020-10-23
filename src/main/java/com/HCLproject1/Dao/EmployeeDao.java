@@ -13,6 +13,8 @@ public interface EmployeeDao{
 
 public EmployeeResponseEntity getSalary(int id);
 
+public EmployeeRequestEntity addEmployee(EmployeeRequestEntity empRequest);
+
 //	
 //	@Query(value="SELECT * from employee where id = :id"
 //			, nativeQuery = true)
