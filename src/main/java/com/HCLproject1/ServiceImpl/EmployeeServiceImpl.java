@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.HCLproject1.Dao.EmployeeDao;
 import com.HCLproject1.Dao.EmployeeRepository;
-import com.HCLproject1.RequestEntity.EmployeeRequestEntity;
-import com.HCLproject1.ResponseEntity.EmployeeResponseEntity;
+import com.HCLproject1.RequestEntity.Employee;
 import com.HCLproject1.service.EmployeeService;
 
 @Component
@@ -28,10 +27,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	
 		
-	@Override
-	public EmployeeResponseEntity getEmpById(int id) {
+	public Employee getEmpById(int id) {
 		// TODO Auto-generated method stub
-		EmployeeResponseEntity empResponse=null;
+		Employee empResponse=null;
 		try {
 		
 		System.out.println("id in service layer"+id);
@@ -49,27 +47,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 
-@Transactional
-	@Override
-	public List<EmployeeRequestEntity> getAllEmployees() {
+	public List<Employee> getAllEmployees() {
 		// TODO Auto-generated method stub
-		List<EmployeeResponseEntity> emp = new ArrayList<EmployeeResponseEntity>();  
+		List<Employee> emp = new ArrayList<Employee>();  
        return	employeeRepo.findAll();  
  
 		}  
-
-
-	@Transactional
-	@Override
+	
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		employeeRepo.deleteById(id);
 	}
 
 
-@Transactional
-	@Override
-	public EmployeeRequestEntity saveOrUpdate(EmployeeRequestEntity employeeRequestEntity) {
+
+	public Employee saveOrUpdate(Employee employeeRequestEntity) {
 		// TODO Auto-generated method stub
 		return employeeRepo.save(employeeRequestEntity);
 	}

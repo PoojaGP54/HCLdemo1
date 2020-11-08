@@ -3,19 +3,18 @@ package com.HCLproject1.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.HCLproject1.RequestEntity.EmployeeRequestEntity;
-import com.HCLproject1.ResponseEntity.EmployeeResponseEntity;
+import com.HCLproject1.RequestEntity.Employee;
 
 public interface EmployeeService {
 
-   public EmployeeResponseEntity getEmpById(int id);
+   public Employee getEmpById(int id);
 
 
-	public List<EmployeeRequestEntity> getAllEmployees();
+	public List<Employee> getAllEmployees();
 
 
 	public void delete(int id);
 
-	public EmployeeRequestEntity saveOrUpdate(EmployeeRequestEntity employeeRequestEntity);
+	public Employee saveOrUpdate(Employee employeeRequestEntity);
 	
 }

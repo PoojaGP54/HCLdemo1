@@ -1,9 +1,32 @@
 package com.HCLproject1.ResponseEntity;
 
-public class EmployeeResponseEntity {
+public class Employee {
 	private int id;
 	private String name;
 	private int salary;
+private String dept;
+
+public Employee()
+{
+	super();
+	
+}
+
+public Employee(int id, String name, int salary, String dept) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.salary = salary;
+	this.dept = dept;
+}
+
+public String getDept() {
+	return dept;
+}
+
+public void setDept(String dept) {
+	this.dept = dept;
+}
 
 public int getId() {
 		return id;
@@ -29,22 +52,11 @@ public void setSalary(int salary) {
 	this.salary = salary;
 }
 
-public EmployeeResponseEntity() {
-	super();
-	// TODO Auto-generated constructor stub
-}
-
 @Override
 public String toString() {
 	return "EmployeeResponseEntity [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 }
 
-public EmployeeResponseEntity(int id, String name, int salary) {
-	super();
-	this.id = id;
-	this.name = name;
-	this.salary = salary;
-}
 
 
 

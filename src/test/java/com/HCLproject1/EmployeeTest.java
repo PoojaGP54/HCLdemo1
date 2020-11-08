@@ -4,18 +4,14 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.mockito.Mockito;
-import org.mockito.stubbing.OngoingStubbing;
 
 import com.HCLproject1.Dao.EmployeeDao;
 import com.HCLproject1.Dao.EmployeeRepository;
-import com.HCLproject1.RequestEntity.EmployeeRequestEntity;
-import com.HCLproject1.ResponseEntity.EmployeeResponseEntity;
+import com.HCLproject1.RequestEntity.Employee;
 import com.HCLproject1.service.EmployeeService;
 
 public class EmployeeTest {
@@ -33,7 +29,7 @@ public class EmployeeTest {
 	@Test
 	public void test() {
 		
-		List<EmployeeRequestEntity> empRes=new ArrayList<EmployeeRequestEntity>();
+		List<Employee> empRes=new ArrayList<Employee>();
 		empRes= employeeRepo.findAll();
 				
 	     when(employeeRepo.findAll()).thenReturn(empRes);

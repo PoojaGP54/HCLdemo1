@@ -46,6 +46,12 @@ testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7
 
 // https://mvnrepository.com/artifact/org.mockito/mockito-core
 testCompile group: 'org.mockito', name: 'mockito-core', version: '3.3.3'
+// https://mvnrepository.com/artifact/com.h2database/h2
+testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
+// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+compile group: 'org.springframework', name: 'spring-jdbc', version: '5.2.10.RELEASE'
+// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper
+compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.37'
 
 	
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {

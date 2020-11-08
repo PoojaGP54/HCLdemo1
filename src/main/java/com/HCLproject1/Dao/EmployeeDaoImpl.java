@@ -3,21 +3,19 @@ package com.HCLproject1.Dao;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.HCLproject1.RequestEntity.EmployeeRequestEntity;
-import com.HCLproject1.ResponseEntity.EmployeeResponseEntity;
+import com.HCLproject1.RequestEntity.Employee;
 
 @Repository
 public class EmployeeDaoImpl  extends NamedParameterJdbcDaoSupportClass implements EmployeeDao{
 
-	@Override
-	public EmployeeResponseEntity getSalary(int id) {
+	public Employee getSalary(int id) {
 		// TODO Auto-generated method stub
-		EmployeeResponseEntity result=  null;
+		Employee result=  null;
 		try {
 			String query = "select * from employee where  id = '"+id+"'";
 System.out.println("in dao layer"+id);
 			 result=  getNamedParameterJdbcTemplate().getJdbcOperations().queryForObject(query,
-					new BeanPropertyRowMapper<EmployeeResponseEntity>(EmployeeResponseEntity.class));
+					new BeanPropertyRowMapper<Employee>(Employee.class));
 			System.out.println(result);
 
 		} catch (Exception ex) {
@@ -29,12 +27,11 @@ System.out.println("in dao layer"+id);
 
 	}
 
-	@Override
-	public EmployeeRequestEntity addEmployee(EmployeeRequestEntity empRequest) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
+//	@Override
+//	public EmployeeRequestEntity addEmployee(EmployeeRequestEntity empRequest) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
 
 }
